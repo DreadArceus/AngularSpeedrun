@@ -1,0 +1,10 @@
+<div class="todo-item">
+  <input
+    class="checkbox"
+    type="checkbox"
+    [checked]="data.completed"
+    (change)="toggleComplete()"
+  />
+  <span [ngClass]="[data.completed ? 'complete' : '']">{{ data.title }}</span>
+  <button class="delete" (click)="deleteTodo()">Delete</button>
+</div>

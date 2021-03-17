@@ -1,0 +1,13 @@
+<div class="todo-box">
+  <app-todo-item
+    *ngFor="let TodoData of data; let index = index"
+    [TodoData]="TodoData"
+    [key]="index"
+    (delete)="deleteTodoItem($event)"
+  ></app-todo-item>
+  <div class="add-form">
+    <input type="text" [(ngModel)]="newTodoText" />
+    <button class="add" (click)="addTodoItem()">Add</button>
+  </div>
+</div>
+<router-outlet></router-outlet>
